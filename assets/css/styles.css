@@ -1,0 +1,223 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: "Relawey";
+  src: url(fuentes/Raleway-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Relawey-Bold";
+  src: url(fuentes/Raleway-Bold.ttf) format("truetype");
+}
+
+body {
+  font-family: "Relawey";
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.menu-cel {
+  cursor: pointer;
+}
+
+.icon-lg {
+  font-size: 15px;
+}
+
+.menu {
+  width: 100%;
+  border-radius: 0px;
+  height: 100%;
+  background: radial-gradient(circle, rgba(240, 243, 240, 0.5) 100%);
+  border: none;
+}
+
+.menu-cel-option {
+  font-family: "Relawey-Bold";
+  font-size: 13px;
+  color: rgb(71, 67, 67);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.barra-header {
+  background: rgb(218, 218, 226);
+  background: radial-gradient(circle, rgba(188, 188, 196, 0.6) 0%, rgba(188, 188, 196, 1) 100%);
+}
+
+.barra-menu {
+  background: rgb(218, 218, 226);
+  background: radial-gradient(circle, rgba(12, 100, 31, 0.591) 0%, rgba(12, 100, 31, 1) 100%);
+  color: #FFF;
+}
+
+.btn-dons {
+  background-color: rgba(12, 100, 31);
+  padding: 7px;
+  color: #FFF;
+  border: solid 1px rgba(12, 100, 31);
+  border-radius: 3px;
+}
+
+.btn-dons:hover {
+  background-color: rgb(24, 63, 32);
+  cursor: pointer;
+  transition: background-color 0.8s ease 0s;
+}
+
+@media only screen and (min-width: 1300px) {
+
+  /*escritorio*/
+
+  /* Header */
+  .test {
+    background-color: blue;
+    min-height: 10px;
+  }
+
+  .logo-header {
+    width: 14%;
+  }
+
+  .opciones-menu {
+    width: 40%;
+    display: block;
+  }
+
+  .opcion-menu {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .img-header {
+    background-image: url(../images/galeria/principal.png);
+    background-repeat: round;
+    resize: both;
+    min-height: 500px;
+  }
+
+  .mt-slogan {
+    margin-top: 4%;
+  }
+
+  .txt-slogan {
+    font-family: "Relawey-Bold";
+    font-size: 35px;
+    text-shadow: 1px 1px 2px black;
+    color: #FFF;
+    width: 45%;
+  }
+
+  .btn-slogan {
+    margin-top:
+      20px;
+  }
+}
+
+@media only screen and (max-width: 1299px) {
+
+  /*tablets o escritorio pequeños*/
+  /* Header */
+  .test {
+    background-color: red;
+    min-height: 10px;
+  }
+
+  .logo-header {
+    width: 13%;
+  }
+
+  .opciones-menu {
+    width: 60%;
+    display: block;
+  }
+
+  .opcion-menu {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .img-header {
+    background-image: url(../images/galeria/principal.png);
+    background-repeat: round;
+    resize: both;
+    min-height: 350px;
+  }
+
+  .mt-slogan {
+    margin-top: 3%;
+  }
+
+  .txt-slogan {
+    font-family: "Relawey-Bold";
+    font-size: 30px;
+    text-shadow: 1px 1px 2px black;
+    color: #FFF;
+    width: 55%;
+  }
+
+  .btn-slogan {
+    margin-top:
+      20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  /*celulares*/
+  /* Header */
+  .test {
+    background-color: yellow;
+    min-height: 10px;
+  }
+
+  .logo-header {
+    width: 30%;
+  }
+
+  .opciones-menu {
+    width: 100%;
+    display: none;
+  }
+
+  .opcion-menu {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .opciones-menu-cel {
+    display: block;
+  }
+
+  .img-header {
+    background-image: url(../images/galeria/principal.png);
+    background-repeat: round;
+    resize: both;
+    min-height: 270px;
+  }
+
+  .mt-slogan {
+    margin-top: 2%;
+  }
+
+  .txt-slogan {
+    font-family: "Relawey-Bold";
+    font-size: 25px;
+    text-shadow: 1px 1px 2px black;
+    color: #FFF;
+    width: 90%;
+  }
+
+  .btn-slogan {
+    margin-top:
+      20px;
+  }
+}
+
+.opcion-menu:hover {
+  background-color: rgba(13, 61, 23, 0.591);
+  cursor: pointer;
+}
