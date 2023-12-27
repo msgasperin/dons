@@ -1,85 +1,85 @@
-const fnLogin = async () => {
-  let user   = document.getElementById('logUser').value;
-  let pass   = document.getElementById('logPsw').value;
-  let idSuc  = document.getElementById('logSucursal').value;
-  let combo  = document.getElementById("logSucursal");
-  let nomSuc = combo.options[combo.selectedIndex].text;
+const fnMove = (div) => {
+  $('html,body').animate(
+    {
+      scrollTop: $("#" + div).offset().top
+    }, 5000);
+}
 
-  var formData = new FormData();
-  formData.append("user", user);
-  formData.append("pass", pass);
-  formData.append("idSuc", idSuc);
-  formData.append("nomSuc", nomSuc);
-  formData.append("func", 'fnRequestLogin');
+const fnContact = () => {
+  $('#contactModal').modal('show');
+  $('#nombre').val('');
+  $('#telefono').val('');
+  $('#correo').val('');
+  $('#mensaje').val('');
+}
 
-  if(user == '') {
+const fnValmail = (correo) => {
+  emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+  if (emailRegex.test(correo))
+    return 1;
+  else
+    return 0;
+}
+
+const fnSendContact = () => {
+  $('#btnSendContact').prop('disabled', true);
+  var nombre = $.trim($('#nombre').val());
+  var telefono = $.trim($('#telefono').val());
+  var correo = $.trim($('#correo').val());
+  var mensaje = $.trim($('#mensaje').val());
+
+  if (nombre == "") {
     toastr.options.timeOut = 2500;
-    toastr.warning('¡Debes ingresar un nombre de usuario!');
-    $('#logUser').focus();
+    toastr.warning('¡Debes ingresar un nombre!');
+    $('#nombre').focus();
+    $('#btnSendContact').prop('disabled', false);
     return;
-  } else if(pass == '') {
+  } else if (telefono == '' && correo == '') {
     toastr.options.timeOut = 2500;
-    toastr.warning('¡Debes ingresar una contraseña!');
-    $('#logPsw').focus();
-    return;
-  } else if(idSuc == 0) {
-    toastr.options.timeOut = 2500;
-    toastr.warning('¡Debes seleccionar una sucursal!');
-    $('#logSucursal').focus();
+    toastr.warning('¡Debes ingresar al menos un medio de contacto (Teléfono o correo) !');
+    $('#btnSendContact').prop('disabled', false);
     return;
   }
-  
-  fetch("controller/fnLogin.php", {
-    method: "POST",
-    body: formData
-  })
-  .then((response) => response.json())
-  .catch((error) => console.error("Error:", error))
-  .then((response) => {
-    if(response == 200) {
+
+  if (correo != '') {
+    validacion = fnValmail(correo);
+    if (validacion == 0) {
       toastr.options.timeOut = 2500;
-      toastr.success('¡Bienvenido al equipo LIB!');
-      redireccionar('views/admin.php');
-    }
-    else if(response == 202) {
-      toastr.options.timeOut = 3500;
-      toastr.warning('El usuario o contraseña son incorrectos o no perteneces a esa sucursal');
-      return;
-    } else if(response == 500) {
-      toastr.options.timeOut = 2500;
-      toastr.error('Hubo un problema, vuelve a intentarlo');
+      toastr.warning('¡Debes ingresar una cuenta de correo válida!');
+      $('#correo').focus();
+      $('#btnSendContact').prop('disabled', false);
       return;
     }
-    
-  });  
-}
+  }
 
-const fnSucursalesLite = (combo) => {
-  var formData = new FormData();
-  formData.append("func", 'fnSucursalesLite');
-
-  fetch("controller/fnLogin.php", {
-    method: "POST",
-    body: formData
-  })
-  .then((response) => response.json())
-  .catch((error) => {
-    console.log(error);
+  if (mensaje == '') {
     toastr.options.timeOut = 2500;
-    toastr.warning('Se presentó un problema para cargar las sucursales');
+    toastr.warning('¡Debes un mensaje !');
+    $('#mensaje').focus();
+    $('#btnSendContact').prop('disabled', false);
     return;
-  })
-  .then((response) => {
-    var html = '<option value="0">Sucursal</option>';
-    if(response.data.length > 0) {
-      response.data.forEach(suc => {
-        html += `<option value="${suc.Id}" class="text_14">${suc.Nombre}</option>`;
-      });
-    }
-    $(`#${combo}`).html(html);
-  });  
-}
+  }
 
-const redireccionar = (dir) => {
- 	setTimeout("location.href='"+dir+"'",1000);
- }
+  var datos = { accion: 'sendContact', nombre, telefono, correo, mensaje };
+  $.ajax({
+    url: "sendMail.php",
+    type: "POST",
+    data: datos
+  }).done(function (res) {
+    if (res.estatus == 'ok') {
+      toastr.options.timeOut = 2500;
+      toastr.success('¡Gracias por contactarnos, pronto nos comunicaremos contigo!');
+      $('#contactModal').modal('hide');
+      $('#btnSendContact').prop('disabled', false);
+    } else {
+      toastr.options.timeOut = 2500;
+      toastr.info('¡Tuvimos un problema, por favor inténtalo de nuevo!');
+      $('#btn_env_cot').prop('disabled', false);
+    }
+  }).fail(function (error) {
+    $('#btnSendContact').prop('disabled', false);
+    toastr.options.timeOut = 2500;
+    toastr.error('¡Tuvimos un problema, por favor inténtalo de nuevo!');
+    return;
+  });
+}

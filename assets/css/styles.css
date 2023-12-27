@@ -54,6 +54,17 @@ body {
   color: #FFF;
 }
 
+.header-modal {
+  background: rgba(12, 100, 31);
+  color: #FFF;
+}
+
+.barra-footer {
+  background: rgba(12, 100, 31);
+  color: #FFF;
+  padding: 30px;
+}
+
 .btn-dons {
   background-color: rgba(12, 100, 31);
   padding: 7px;
@@ -66,6 +77,11 @@ body {
   background-color: rgb(24, 63, 32);
   cursor: pointer;
   transition: background-color 0.8s ease 0s;
+}
+
+.galeria {
+  background-color: #f7f6f6;
+  padding: 40px 20px 40px 20px;
 }
 
 @media only screen and (min-width: 1300px) {
@@ -92,8 +108,12 @@ body {
     font-size: 14px;
   }
 
+  .opciones-menu-cel {
+    display: none;
+  }
+
   .img-header {
-    background-image: url(../images/galeria/principal.png);
+    background-image: url(../images/principal.webp);
     background-repeat: round;
     resize: both;
     min-height: 500px;
@@ -115,6 +135,40 @@ body {
     margin-top:
       20px;
   }
+
+  /* Intro Seccción */
+
+  .separaciones {
+    margin-top: 40px;
+  }
+
+  .tit_Intro {
+    font-family: "Relawey-Bold";
+    font-size: 35px;
+    color: #201e1e;
+  }
+
+  .det_Intro {
+    font-size: 19px;
+    margin-top: 20px;
+  }
+
+  .tip_Eventos {
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .nosotros {
+    background-color: #f7f6f6;
+    padding: 40px 20px 40px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .txt_Servicios {
+    font-size: 18px;
+    font-family: "Relawey-Bold";
+  }
+
 }
 
 @media only screen and (max-width: 1299px) {
@@ -140,8 +194,12 @@ body {
     font-size: 14px;
   }
 
+  .opciones-menu-cel {
+    display: none;
+  }
+
   .img-header {
-    background-image: url(../images/galeria/principal.png);
+    background-image: url(../images/principal.webp);
     background-repeat: round;
     resize: both;
     min-height: 350px;
@@ -162,6 +220,39 @@ body {
   .btn-slogan {
     margin-top:
       20px;
+  }
+
+  /* Intro Seccción */
+
+  .separaciones {
+    margin-top: 40px;
+  }
+
+  .tit_Intro {
+    font-family: "Relawey-Bold";
+    font-size: 35px;
+    color: #201e1e;
+  }
+
+  .det_Intro {
+    font-size: 19px;
+    margin-top: 20px;
+  }
+
+  .tip_Eventos {
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .nosotros {
+    background-color: #f7f6f6;
+    padding: 40px 20px 40px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .txt_Servicios {
+    font-size: 18px;
+    font-family: "Relawey-Bold";
   }
 }
 
@@ -193,7 +284,7 @@ body {
   }
 
   .img-header {
-    background-image: url(../images/galeria/principal.png);
+    background-image: url(../images/principal.webp);
     background-repeat: round;
     resize: both;
     min-height: 270px;
@@ -215,9 +306,46 @@ body {
     margin-top:
       20px;
   }
+
+  /* Intro Seccción */
+
+  .separaciones {
+    margin-top: 40px;
+  }
+
+  .tit_Intro {
+    font-family: "Relawey-Bold";
+    font-size: 35px;
+    color: #201e1e;
+  }
+
+  .det_Intro {
+    font-size: 19px;
+    margin-top: 20px;
+  }
+
+  .tip_Eventos {
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .nosotros {
+    background-color: #f7f6f6;
+    padding: 40px 20px 40px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .txt_Servicios {
+    font-size: 18px;
+    font-family: "Relawey-Bold";
+  }
 }
 
 .opcion-menu:hover {
   background-color: rgba(13, 61, 23, 0.591);
   cursor: pointer;
+}
+
+.justify {
+  text-align: justify;
 }

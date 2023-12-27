@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>:: DONS ::</title>
+	<title>:: DON´S ::</title>
 	<!-- CSS -->
 	<link rel="shortcut icon" href="assets/images/favicon.png" />
 	<link rel="stylesheet" type="text/css" href="lib/toastr/toastr.css">
@@ -16,12 +16,11 @@
 
 <body>
 	<header>
-		<div class="test"></div>
 		<div class="img-header">
 			<div class="barra-header">
 				<div class="row">
 					<div class="col-12" align="center">
-						<img src="assets/images/logo.png" class="logo-header" />
+						<img src="assets/images/logo.webp" class="logo-header" />
 					</div>
 				</div>
 			</div>
@@ -31,26 +30,25 @@
 					<div class="col-12" align="center">
 						<div class="opciones-menu">
 							<div class="row">
-								<div class="col-2 opcion-menu">
-									Nosotros
-								</div>
-								<div class="col-2 opcion-menu">
-									Servicios
-								</div>
-								<div class="col-2 opcion-menu">
+								<div class="col-1"></div>
+								<div class="col-2 opcion-menu" onclick="fnMove('eventos');">
 									Eventos
 								</div>
-								<div class="col-2 opcion-menu">
-									Mobiliario
+								<div class="col-2 opcion-menu" onclick="fnMove('nosotros');">
+									Nosotros
 								</div>
-								<div class="col-2 opcion-menu">
+								<div class="col-2 opcion-menu" onclick="fnMove('servicios');">
+									Servicios
+								</div>
+								<div class="col-2 opcion-menu" onclick="fnMove('galeria');">
 									Galería
 								</div>
-								<div class="col-2 opcion-menu">
+								<div class="col-2 opcion-menu" onclick="fnContact();">
 									Contacto
 								</div>
 							</div>
 						</div>
+
 						<div class="opciones-menu-cel">
 							<div class="row">
 								<div class="col-12 opcion-menu">
@@ -59,27 +57,23 @@
 										<i class="bi bi-list icon-lg"></i> Menu
 									</div>
 									<ul class="dropdown-menu menu" aria-labelledby="dropdownMenuButton1">
-										<li><a href="#" class="menu-cel-option">Nosotros</a></li>
+										<li onclick="fnMove('eventos');"><a href="#" class="menu-cel-option">Eventos</a></li>
 										<li>
 											<hr class="dropdown-divider">
 										</li>
-										<li><a href="#" class="menu-cel-option">Servicios</a></li>
+										<li onclick="fnMove('nosotros');"><a href="#" class="menu-cel-option">Nosotros</a></li>
 										<li>
 											<hr class="dropdown-divider">
 										</li>
-										<li><a href="#" class="menu-cel-option">Eventos</a></li>
+										<li onclick="fnMove('servicios');"><a href="#" class="menu-cel-option">Servicios</a></li>
 										<li>
 											<hr class="dropdown-divider">
 										</li>
-										<li><a href="#" class="menu-cel-option">Mobiliario</a></li>
+										<li onclick="fnMove('galeria');"><a href="#" class="menu-cel-option">Galería</a></li>
 										<li>
 											<hr class="dropdown-divider">
 										</li>
-										<li><a href="#" class="menu-cel-option">Galería</a></li>
-										<li>
-											<hr class="dropdown-divider">
-										</li>
-										<li><a href="#" class="menu-cel-option">Contacto</a></li>
+										<li onclick="fnContact();"><a href="#" class="menu-cel-option">Contacto</a></li>
 
 									</ul>
 								</div>
@@ -94,7 +88,7 @@
 					Estilo, Profesionalismo y Sabor es Nuestra Pasión
 				</div>
 				<div class="btn-slogan">
-					<button type="button" class="btn-dons">
+					<button type="button" class="btn-dons" onclick="fnContact();">
 						Solicita nuestro servicio
 					</button>
 				</div>
@@ -102,11 +96,310 @@
 
 	</header>
 
-	<script src="js/jquery-3.5.0.min.js"></script>
+	<section id="eventos" class="separaciones">
+		<div align="center">
+			<div class="tit_Intro">
+				Nuestra pasión
+			</div>
+			<div class="det_Intro">
+				La fusión entre la banquetería y la decoración en las fiestas que desarrollamos es un acto de pasión que va más
+				allá de la simple organización; es la conjunción de dos mundos donde la gastronomía se entrelaza con la estética
+				para crear experiencias inolvidables. Nuestra pasión se manifiesta en la meticulosa preparación de cada plato,
+				en la selección de ingredientes frescos y exquisitos sabores que deleitarán a los comensales.
+			</div>
+
+			<div class="tip_Eventos">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-6 col-12 mt-2">
+						<img src="assets/images/tipo_eventos/boda.webp" alt="Bodas" class="img img-fluid" />
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-12 mt-2">
+						<img src="assets/images/tipo_eventos/empresa.webp" alt="Empresas" class="img img-fluid" />
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-12 mt-2">
+						<img src="assets/images/tipo_eventos/graduacion.webp" alt="Graduaciones" class="img img-fluid" />
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-12 mt-2">
+						<img src="assets/images/tipo_eventos/privado.webp" alt="Eventos privados" class="img img-fluid" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="nosotros" class="separaciones">
+		<div align="center" class="nosotros">
+			<div class="tit_Intro">
+				Nosotros
+			</div>
+			<div class="row">
+				<div class="col-lg-2 col-md-3 col-sm-4 col-12 mt-2">
+					<img src="assets/images/logo.webp" class="img img-fluid">
+				</div>
+				<div class="col-lg-10 col-md-9 col-sm-8 col-12 mt-2" align="left">
+					<div class="det_Intro justify">
+						En <strong>Banquetes Don´s"</strong>, nos dedicamos apasionadamente a la creación de
+						experiencias gastronómicas excepcionales para cada evento. Con un equipo altamente experimentado y creativo,
+						nos
+						comprometemos a ofrecer un servicio de calidad que va más allá de simplemente satisfacer el paladar. Nos
+						esforzamos por fusionar la frescura de los ingredientes, la innovación culinaria y una presentación
+						impecable
+						para superar las expectativas de nuestros clientes en cada ocasión. Nuestro objetivo es convertir cada
+						evento
+						en
+						un momento memorable y único, aportando un toque distintivo a través de la combinación perfecta entre
+						deliciosa
+						comida y una atención al detalle que refleje la personalidad y visión de cada celebración.
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<section id="servicios" class="separaciones">
+		<div align="center" class="servicios">
+			<div class="tit_Intro">
+				Servicios
+			</div>
+			<div class="det_Intro tip_Eventos justify">
+				Ofrecemos una amplia gama de servicios de banquetería adaptados a tus necesidades específicas. Desde la
+				planificación inicial hasta la ejecución impecable del evento, nos encargamos de cada detalle para asegurarnos
+				de que tu celebración sea un éxito absoluto. Nuestros servicios incluyen asesoramiento personalizado en la
+				selección del menú, adaptándonos a preferencias alimenticias y temáticas específicas. Además, proporcionamos una
+				amplia variedad de opciones gastronómicas, desde exquisitos platos gourmet hasta menús más informales y
+				creativos. Nos enfocamos en brindar una experiencia completa, ofreciendo servicios adicionales como decoración,
+				mobiliario, coordinación de personal y gestión integral del evento para que puedas disfrutar de cada momento sin
+				preocupaciones. Ya sea una boda, un evento corporativo o cualquier otra celebración especial, estamos aquí para
+				hacer realidad tus sueños y superar tus expectativas en cada bocado y detalle.
+			</div>
+			<div class="separaciones">
+				<div class="row txt_Servicios" align="center">
+					<div class="col-lg-2 col-md-2 col-sm-3 col-6 mt-4">
+						<img src="assets/images/icons/servicios/icons8-catering-64.png" width="60px"><br>Catering
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-3 col-6 mt-4">
+						<img src="assets/images/icons/servicios/icons8-banquete-64.png" width="60px"><br>Banquetes
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-3 col-6 mt-4">
+						<img src="assets/images/icons/servicios/icons8-comida-mexicana-64.png" width="60px"><br>Cocina mexicana
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-3 col-6 mt-4">
+						<img src="assets/images/icons/servicios/icons8-signo-comercial-64.png" width="60px"><br>Renta de letras
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-3 col-6 mt-4">
+						<img src="assets/images/icons/servicios/icons8-vista-360-96.png" width="60px"><br>Plataforma 360
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-3 col-6 mt-4">
+						<img src="assets/images/icons/servicios/icons8-baby-shower-64.png" width="60px"><br>Decoración
+					</div>
+				</div>
+				<div class="row separaciones txt_Servicios">
+					<div class="col-lg-2 col-md-2 col-sm-3 col-6 mt-4">
+						<img src="assets/images/icons/servicios/icons8-silla-del-comedor-64.png" width="60px"><br>Renta de
+						mobiliario
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-3 col-6 mt-4">
+						<img src="assets/images/icons/servicios/icons8-barra-de-bar-100.png" width="60px"><br>Servicio de
+						cocktelería
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-3 col-6 mt-4">
+						<img src="assets/images/icons/servicios/icons8-ramo-de-novia-96.png" width="60px"><br>Floristería
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-3 col-6 mt-4">
+						<img src="assets/images/icons/servicios/icons8-bufe-64.png" width="60px"><br>Servicio de Bufet
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-3 col-6 mt-4">
+						<img src="assets/images/icons/servicios/icons8-grabar-musica-96.png" width="60px"><br>Música y sonido
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-3 col-6 mt-4">
+						<img src="assets/images/icons/servicios/icons8-fotografo-profesional-96.png" width="60px"><br>Sesiones
+						fotográficas
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<section id="galeria" class="separaciones">
+		<div align="center" class="galeria">
+			<div class="tit_Intro">
+				Galerías
+			</div>
+			<div class="separaciones">
+				<div class="row" align="center">
+					<div class="col-lg-3 offset-lg-3 col-md-4 offset-md-2 col-sm-6 col-12 mt-4 pointer"
+						onclick="$('#modGaleryPlatillos').modal('show');">
+						<img src="assets/images/galeria/portada_platillos.webp" alt="platillos" class="img img-fluid" />
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4 pointer"
+						onclick="$('#modGaleryMobiliario').modal('show');">
+						<img src="assets/images/galeria/portada_mobiliario.webp" alt="mobiliario" class="img img-fluid" />
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<section id="modales">
+		<div class="modal fade" id="contactModal" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header header-modal">
+						<h5 class="modal-title" id="exampleModalLabel"><strong>¡ Estamos emocionados por saber de ti !</strong></h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-12" align="center">
+								Escríbenos por whatsApp <a href="https://wa.me/522717025878?text=Hola estoy interesado en sus servicios"
+									target="_blank"><img src="assets/images/icons/icons8-whatsapp-96.png" width="50"
+										data-bs-dismiss="modal" /></a><br><br>
+								o llena el siguiente formulario y a la brevedad posible nos comunicaremos contigo
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12 mt-4">
+								<input type="text" id="nombre" class="form-control form-floating fst-italic fs-6"
+									placeholder="escribe tu nombre *" maxlength="200" />
+							</div>
+							<div class="col-12 mt-4">
+								<input type="text" id="telefono" class="form-control form-floating fst-italic fs-6"
+									placeholder="escribe tu teléfono" maxlength="200" />
+							</div>
+							<div class="col-12 mt-4">
+								<input type="text" id="correo" class="form-control form-floating fst-italic fs-6"
+									placeholder="escribe tu correo" maxlength="200" />
+							</div>
+							<div class="col-12 mt-4">
+								<textarea type="text" id="mensaje" class="form-control form-floating fst-italic fs-6"
+									placeholder="escribe tu mensaje" maxlength="200"></textarea>
+							</div>
+						</div>
+						<div class="row separaciones">
+							<div class="col-12" align="right">
+								<button type="button" class="btn btn-success" id="btnSendContact" onclick="fnSendContact();">Enviar
+									mensaje</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modGaleryMobiliario" tabindex="-1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div id="carouselMobiliario" class="carousel slide" data-bs-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="assets/images/galeria/mobiliario/m01.webp" class="d-block w-100" alt="Mobiliario">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/mobiliario/m02.webp" class="d-block w-100" alt="Mobiliario">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/mobiliario/m03.webp" class="d-block w-100" alt="Mobiliario">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/mobiliario/m04.webp" class="d-block w-100" alt="Mobiliario">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/mobiliario/m05.webp" class="d-block w-100" alt="Mobiliario">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/mobiliario/m06.webp" class="d-block w-100" alt="Mobiliario">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/mobiliario/m07.webp" class="d-block w-100" alt="Mobiliario">
+								</div>
+							</div>
+							<button class="carousel-control-prev" type="button" data-bs-target="#carouselMobiliario"
+								data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carouselMobiliario"
+								data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+						<div class="row separaciones">
+							<div class="col-12" align="right">
+								<button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modGaleryPlatillos" tabindex="-1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div id="carouselPlatillos" class="carousel slide" data-bs-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="assets/images/galeria/platillos/p01.webp" class="d-block w-100" alt="Platillos">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/platillos/p02.webp" class="d-block w-100" alt="Platillos">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/platillos/p03.webp" class="d-block w-100" alt="Platillos">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/platillos/p04.webp" class="d-block w-100" alt="Platillos">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/platillos/p05.webp" class="d-block w-100" alt="Platillos">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/platillos/p06.webp" class="d-block w-100" alt="Platillos">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/platillos/p07.webp" class="d-block w-100" alt="Platillos">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/images/galeria/platillos/p08.webp" class="d-block w-100" alt="Platillos">
+								</div>
+							</div>
+							<button class="carousel-control-prev" type="button" data-bs-target="#carouselPlatillos"
+								data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carouselPlatillos"
+								data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+						<div class="row separaciones">
+							<div class="col-12" align="right">
+								<button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="footer">
+		<div class="barra-footer">
+			<div class="row">
+				<div class="col-lg-2" align="center">
+					<img src="assets/images/logo_white.webp" width="120px">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/jquery-3.5.0.min.js"></script>
 	<script src="lib/toastr/toastr.min.js"></script>
-	<script src="lib/sweetalert2/dist/sweetalert2.min.js"></script>
 	<script defer src="lib/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
-	<script src="js/functions.js>"></script>
+	<script src="assets/js/functions.js"></script>
 </body>
 
 </html>
