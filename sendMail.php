@@ -26,7 +26,7 @@ if(isset($_POST["accion"])) {
 		$oMail             = new PHPMailer();				
 		$oMail->isSMTP();
 		$oMail->CharSet    = 'UTF-8';
-		$oMail->Host       = 'https://www.banquetes-dons.com/';  ///caso go daddy encuentras el host en url de cpanel
+		$oMail->Host       = 'www.banquetes-dons.com';  ///caso go daddy encuentras el host en url de cpanel
 		$oMail->Username   = 'contacto@banquetes-dons.com';
 		$oMail->Password   = 'H&5EppI^9eW0';
 
