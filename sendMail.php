@@ -26,20 +26,20 @@ if(isset($_POST["accion"])) {
 		$oMail             = new PHPMailer();				
 		$oMail->isSMTP();
 		$oMail->CharSet    = 'UTF-8';
-		/* $oMail->Host       = 'www.lib-laboratorios.com';  ///caso go daddy encuentras el host en url de cpanel
-		$oMail->Username   = 'contacto@lib-laboratorios.com';
-		$oMail->Password   = 'C0ntact0_!'; */ 
+		$oMail->Host       = 'https://www.banquetes-dons.com/';  ///caso go daddy encuentras el host en url de cpanel
+		$oMail->Username   = 'contacto@banquetes-dons.com';
+		$oMail->Password   = 'H&5EppI^9eW0';
 
-		$oMail->Host     = 'smtp.gmail.com';
+		/* $oMail->Host     = 'smtp.gmail.com';
 		$oMail->Username   = 'miguel.gasperin9@gmail.com';
-		$oMail->Password   = 'ceejaptvgjrndpxl';
+		$oMail->Password   = 'ceejaptvgjrndpxl'; */
 
 		$oMail->Port       = 587;               //Puerto
 		$oMail->SMTPSecure = 'tls';       //Tipo se seguridad
 		$oMail->SMTPAuth   = true;          //True indica que se tendrá que aunténticar por FTP.
 		$oMail->setFrom('contacto@dons.com','Contacto desde DON´S');
 		$oMail->addAddress('miguel.gasperin@hotmail.com','Hotmail');
-		$oMail->addAddress('libad2023@hotmail.com','Atención a clientes');
+		// $oMail->addAddress('libad2023@hotmail.com','Atención a clientes');
 		$oMail->Subject    = 'Contacto de cliente';
 		$oMail->msgHTML($contenido);				
 		if(!$oMail->send())
